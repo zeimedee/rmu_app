@@ -1,0 +1,19 @@
+<ion-view view-title="Maritime News">
+  <ion-content class="padding">
+  <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()"></ion-refresher>
+  	<div class="list card" ng-repeat="new in news" > 	
+  		<div class="padding">
+		    <h4>{{new.title.text}}</h4>
+		    <p>{{new.date}}</p>
+		</div>
+	 
+		<div class="item item-body">
+		    <a href="#" ng-click="GotoLink('{{new.link.href}}')" ><img class="full-image" src="{{new.image.src}}"></a>
+		    <p>{{new.content}}</p>
+		    <ul>
+		       <li class="content" ng-repeat="row in data">
+		    </ul>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>
